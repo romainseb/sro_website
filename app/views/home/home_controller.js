@@ -1,7 +1,6 @@
-
 /* Controllers */
 angular.module('website').controller('HomeController',
-    function(){
+    function () {
         'use strict';
-        this.valeur = "coucou";
-});
+    }
+);

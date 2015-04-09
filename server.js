@@ -1,10 +1,10 @@
 // modules =================================================
 var express = require('express');
 var bodyParser = require('body-parser');
-var app     = express();
+var app = express();
 
 // configuration ===========================================
-var port = 8090; // set our port
+var port = 8081; // set our port
 
 app.use(express.static(__dirname)); 	// set the static files location /public/img will be /img for users
 
@@ -19,9 +19,8 @@ app.use("/css", express.static(__dirname + "/app/css"));
 app.use("/data", express.static(__dirname + "/app/data"));
 app.use("/partials", express.static(__dirname + "/app/partials"));
 
-app.all('/*', function(req, res) {
-    res.cookie('env', 'dev', { expires: new Date(Date.now() + 900000), httpOnly: false });
-    res.sendFile( __dirname + "/index.html");
+app.all('/*', function (req, res) {
+    res.sendFile(__dirname + "/index.html");
 });
 
 

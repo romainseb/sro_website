@@ -1,4 +1,9 @@
 #header {
-    height: 500px;
-    background-color: crimson;
+    height: 520px;
+    background-color: lightgray;
+}
+
+#header .name
+{
+
 }

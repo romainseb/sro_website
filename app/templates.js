@@ -12,7 +12,7 @@ angular.module('website').run(['$templateCache', function($templateCache) {
 
 
   $templateCache.put('app/views/home/home.html',
-    "<div><sw-header></sw-header><h1>test</h1></div>"
+    "<div><sw-header></sw-header></div>"
   );
 
 }]);

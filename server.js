@@ -14,6 +14,7 @@ app.use(bodyParser.json());
 //require('./app/routes')(app); // pass our application into our routes
 
 app.use("/js", express.static(__dirname + "/app/js"));
+app.use("/dist", express.static(__dirname + "/dist"));
 app.use("/img", express.static(__dirname + "/app/img"));
 app.use("/css", express.static(__dirname + "/app/css"));
 app.use("/data", express.static(__dirname + "/app/data"));

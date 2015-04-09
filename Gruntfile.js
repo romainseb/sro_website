@@ -10,6 +10,7 @@ module.exports = function (grunt) {
         jshint: {
             allFiles: [
                 'app/**/*.js',
+                '!app/templates.js',
                 '!app/vendors/**/*.js'
             ],
             options: {
@@ -61,7 +62,7 @@ module.exports = function (grunt) {
                 src: [
                     "app/vendors/js/angular.min.js",
                     "app/app.js",
-                    "app/**/*.js",
+                    "app/**/*.js"
                 ],
                 dest: 'dist/script.js'
             }
@@ -93,7 +94,7 @@ module.exports = function (grunt) {
             options: {
                 singleQuotes: true
             },
-            app1: {
+            application: {
                 files: {
                     'dist/script.js': ['dist/script.js']
                 }
@@ -144,7 +145,7 @@ module.exports = function (grunt) {
         clean: {
             tmp: ["tmp/"],
             dist: ["dist/"],
-            "end-build": ["dist/amc-script.js", "dist/script.js", 'dist/style.css']
+            "end-build": ["dist/script.js", 'dist/style.css']
         }
     });
 
@@ -154,12 +155,17 @@ module.exports = function (grunt) {
         'concat',
         'autoprefixer',
         'cssmin',
-        'csslint',
         'ngtemplates',
         'ngAnnotate',
         'uglify',
-        'jshint',
-        'clean:end-build'
+        'clean:end-build',
+        'csslint',
+        'jshint'
+    ]);
+
+    grunt.registerTask('default + watch', [
+        'default',
+        'watch'
     ]);
 
     grunt.registerTask('bower-task', [

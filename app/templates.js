@@ -7,7 +7,7 @@ angular.module('website').run(['$templateCache', function($templateCache) {
 
 
   $templateCache.put('app/views/home/components/header/header.html',
-    "<div id=header><div class=name>Sébastien Romain</div><div class=title>Développeur Full-Stack</div><li>{{header.maValeur}}</li></div>"
+    "<div id=header><div class=top-panel><div class=name>Sébastien Romain</div><div class=title>Développeur Full-Stack</div></div><ul class=\"menu-links row\"><li class=\"large-1 large-offset-2 column\" anchor-smooth-scroll=header>Home</li><li class=\"large-1 column\">About</li><li class=\"large-1 column\">Resume</li><li class=\"large-2 column\"><a href=https://twitter.com/romainseb target=_blank><i class=\"fa fa-twitter\"></i></a> <a href=https://github.com/romainseb target=_blank><i class=\"fa fa-github\"></i></a> <a href=https://fr.linkedin.com/pub/sébastien-romain/50/8a1/45a target=_blank><i class=\"fa fa-linkedin\"></i></a></li><li class=\"large-1 column\">Portfolio</li><li class=\"large-1 column\">Blog</li><li class=\"large-1 column\">Contact</li></ul></div>"
   );
 
 

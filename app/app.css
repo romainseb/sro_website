@@ -1,7 +1,9 @@
 /* latin */
 @font-face {
-    font-family: 'Maven Pro';
+    font-family: 'maven';
     font-style: normal;
     font-weight: 400;
-    src: local('Maven Pro Regular'), local('MavenProRegular'), url("fonts/maven-pro.woff2") format('woff2');
+    src: local('Maven Pro Regular'),
+    local('MavenProRegular-Regular'),
+    url("/fonts/maven-pro.woff") format('woff');
 }

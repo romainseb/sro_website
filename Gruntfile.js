@@ -124,15 +124,6 @@ module.exports = function (grunt) {
                 expand: true,
                 flatten: true,
                 filter: 'isFile'
-            },
-            fontFiles: {
-                src: [
-                    'app/vendors/css/fonts/*'
-                ],
-                dest: 'dist/fonts/',
-                expand: true,
-                flatten: true,
-                filter: 'isFile'
             }
         },
         bower: {
@@ -146,12 +137,18 @@ module.exports = function (grunt) {
             tmp: ["tmp/"],
             dist: ["dist/"],
             "end-build": ["dist/script.js", 'dist/style.css']
+        },
+        express: {
+            dev: {
+                options: {
+                    script: 'server.js'
+                }
+            }
         }
     });
 
     grunt.registerTask('default', [
         'clean:dist',
-        'copy:fontFiles',
         'concat',
         'autoprefixer',
         'cssmin',
@@ -165,6 +162,12 @@ module.exports = function (grunt) {
 
     grunt.registerTask('default + watch', [
         'default',
+        'watch'
+    ]);
+
+    grunt.registerTask('default + express + watch', [
+        'default',
+        'express',
         'watch'
     ]);
 

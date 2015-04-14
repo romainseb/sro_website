@@ -1,5 +1,5 @@
 #sroAbout {
-    height: 1600px;
+    height: 1500px;
     width: 100%;
     background-color: #4ac2be;
     font-family: maven;
@@ -15,6 +15,23 @@
 }
 
 #sroAbout .name {
-    margin-top: 15px;
+    margin-top: 30px;
     font-size: 30px;
+}
+
+#sroAbout .title {
+    font-size: 20px;
+}
+
+#sroAbout .profile-photo {
+    border-radius: 150px;
+    width: 75%;
+    max-width: 200px;
+    margin-top: 50px;
+    text-align: center;
+    border: 2px solid white;
+}
+
+#sroAbout .profile-photo-container {
+    text-align: right;
 }

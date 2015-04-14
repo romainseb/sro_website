@@ -1,0 +1,55 @@
+#sroHeader {
+    height: 520px;
+    background: url("/img/header.jpg");
+    color: white;
+    font-family: maven;
+    text-align: center;
+    position: relative;
+    background-size: cover;
+}
+
+#sroHeader .name {
+    font-size: 60px;
+}
+
+#sroHeader .title {
+    font-size: 22px;
+}
+
+#sroHeader .top-panel {
+    padding-top: 180px;
+}
+
+#sroHeader .menu-links {
+    background-color: rgba(255, 255, 255, .1);
+    width: 100%;
+    height: 60px;
+    position: absolute;
+    bottom: 0;
+    transition: all 0.3s ease-in;
+}
+
+#sroHeader ul li {
+    padding-top: 20px;
+    list-style: none;
+}
+
+#sroHeader ul li a {
+    color: white;
+    margin-left: 5px;
+    margin-right: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease-in;
+}
+
+#sroHeader .menu-links.menu-fixed {
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    background-color: white;
+    color: #555555;
+}
+
+#sroHeader .menu-links.menu-fixed a {
+    color: #555555;
+}

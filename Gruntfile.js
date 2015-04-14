@@ -82,7 +82,7 @@ module.exports = function (grunt) {
         uglify: {
             js: {
                 options: {
-                    sourceMap: false,
+                    sourceMap: true,
                     sourceMapName: 'dist/script.min.js.map'
                 },
                 files: {
@@ -136,13 +136,25 @@ module.exports = function (grunt) {
         clean: {
             tmp: ["tmp/"],
             dist: ["dist/"],
-            "end-build": ["dist/script.js", 'dist/style.css']
+            "end-build": ['dist/style.css']
         },
         express: {
             dev: {
                 options: {
                     script: 'server.js'
                 }
+            }
+        },
+        sro_create_angular_components: {
+            website: {
+                views: [
+                    "app/views/home"
+                ],
+                directives: [
+                    "app/views/home/components/sroHeader",
+                    "app/views/home/components/sroResume",
+                    "app/views/home/components/sroAbout"
+                ]
             }
         }
     });
@@ -158,6 +170,10 @@ module.exports = function (grunt) {
         'clean:end-build',
         'csslint',
         'jshint'
+    ]);
+
+    grunt.registerTask('generate files', [
+        'sro_create_angular_components'
     ]);
 
     grunt.registerTask('default + watch', [

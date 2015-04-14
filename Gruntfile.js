@@ -111,11 +111,14 @@ module.exports = function (grunt) {
             },
             js: {
                 files: ['app/**/*.js'],
-                tasks: ['concat:js', 'ngAnnotate', 'uglify', 'jshint', 'clean:end-build']
+                tasks: ['concat:js', 'ngAnnotate', 'uglify', 'jshint', 'clean:end-build'],
+                options: {
+                    interrupt: true
+                }
             },
             livereload: {
                 files: ['dist/*.min.*'],
-                options: { livereload: true }
+                options: {livereload: true}
             }
         },
         copy: {
@@ -140,7 +143,7 @@ module.exports = function (grunt) {
         clean: {
             tmp: ["tmp/"],
             dist: ["dist/"],
-            "end-build": ['dist/style.css','dist/script.js']
+            "end-build": ['dist/style.css', 'dist/script.js']
         },
         express: {
             dev: {

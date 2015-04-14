@@ -82,7 +82,7 @@ module.exports = function (grunt) {
         uglify: {
             js: {
                 options: {
-                    sourceMap: true,
+                    sourceMap: false,
                     sourceMapName: 'dist/script.min.js.map'
                 },
                 files: {
@@ -112,6 +112,10 @@ module.exports = function (grunt) {
             js: {
                 files: ['app/**/*.js'],
                 tasks: ['concat:js', 'ngAnnotate', 'uglify', 'jshint', 'clean:end-build']
+            },
+            livereload: {
+                files: ['dist/*.min.*'],
+                options: { livereload: true }
             }
         },
         copy: {
@@ -136,12 +140,13 @@ module.exports = function (grunt) {
         clean: {
             tmp: ["tmp/"],
             dist: ["dist/"],
-            "end-build": ['dist/style.css']
+            "end-build": ['dist/style.css','dist/script.js']
         },
         express: {
             dev: {
                 options: {
-                    script: 'server.js'
+                    script: 'server.js',
+                    spawn: false
                 }
             }
         },

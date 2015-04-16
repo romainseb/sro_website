@@ -1,1 +1,12 @@
-<div class="sroResume"></div>
+<div id="sroResume">
+    <div class="entete">
+        <h2>Parcours professionnel</h2>
+    </div>
+
+    <div class="container">
+        <div ng-repeat="job in sroResume.jobs">
+            {{job.title}}
+        </div>
+
+    </div>
+</div>

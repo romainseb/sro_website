@@ -1,0 +1,13 @@
+#home .entete {
+    background: #343434;
+    height: 80px;
+}
+
+#home .entete h2 {
+    margin: 0;
+    padding-top: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    font-family: maven;
+}

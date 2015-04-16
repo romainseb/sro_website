@@ -7,3 +7,13 @@
     local('MavenProRegular-Regular'),
     url("/fonts/maven-pro.woff") format('woff');
 }
+
+@font-face {
+    font-family: 'latolight';
+    src: url('/fonts/lato-light-webfont.eot');
+    src: url('/fonts/lato-light-webfont.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/lato-light-webfont.ttf') format('truetype'),
+    url('/fonts/lato-light-webfont.svg#latolight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

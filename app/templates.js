@@ -7,22 +7,22 @@ angular.module('website').run(['$templateCache', function($templateCache) {
 
 
   $templateCache.put('app/views/home/components/sroAbout/sroAbout.html',
-    "<div id=sroAbout class=row><div class=\"large-12 right-part column\"><div class=row><div class=\"column large-offset-2 large-2 profile-photo-container\"><img class=profile-photo src=/img/moi.png></div><div class=\"column large-6\"><div class=name>Sébastien Romain</div><div class=title>Développeur Web</div><p>Développeur avec 5 ans d’expériences, je suis actuellement référent technique AngularJS pour un projet comptant environ quarante ressources. Passionné par mon métier, qui m’offre l’opportunité de rechercher et d’imaginer des solutions aux besoins des entreprises et des utilisateurs, et curieux de nature je m’intéresse à l’évolution des technologies qui apparaissent sur le marché. Spécialiste du développement web, je m'intéresse tout particulièrement au monde Javascript et à ses différents framework.</p></div></div></div></div>"
+    "<div id=sroAbout class=row><div class=\"large-4 large-offset-2 column\"><div class=\"large-8 column\"><div class=name>Sébastien Romain</div><div class=title>Développeur Web</div></div><div class=\"large-4 column profile-photo-container\"><img class=profile-photo src=/img/moi.png></div></div><div class=\"large-6 right-part column\"><div class=\"large-8 column\"><p>Développeur avec 5 ans d’expériences, je suis actuellement référent technique AngularJS pour un projet comptant environ quarante personnes. Passionné par mon métier, qui m’offre l’opportunité de rechercher et d’imaginer des solutions aux besoins des entreprises et des utilisateurs, et curieux de nature je m’intéresse à l’évolution des technologies qui apparaissent sur le marché. Spécialiste du développement web, je m'intéresse tout particulièrement au monde Javascript et à ses différents framework.</p></div></div></div>"
   );
 
 
   $templateCache.put('app/views/home/components/sroHeader/sroHeader.html',
-    "<div id=sroHeader><div class=top-panel><div class=name>Sébastien Romain</div><div class=title>Développeur Web</div></div><ul class=\"menu-links row\" du-scrollspy ng-class=\"{'menu-fixed':sroHeader.menuFixed}\"><li class=\"large-1 large-offset-2 column\"><a href=#sroHeader du-smooth-scroll>Home</a></li><li class=\"large-1 column\"><a href=#sroAbout du-smooth-scroll>About</a></li><li class=\"large-1 column\">Resume</li><li class=\"large-2 column\"><a href=https://twitter.com/romainseb target=_blank><i class=\"fa fa-twitter\"></i></a> <a href=https://github.com/romainseb target=_blank><i class=\"fa fa-github\"></i></a> <a href=https://fr.linkedin.com/pub/sébastien-romain/50/8a1/45a target=_blank><i class=\"fa fa-linkedin\"></i></a></li><li class=\"large-1 column\">Portfolio</li><li class=\"large-1 column\">Blog</li><li class=\"large-1 column\">Contact</li></ul></div>"
+    "<div id=sroHeader><div class=top-panel><div class=name>Sébastien Romain</div><div class=title>Développeur Web</div></div><ul class=\"menu-links row\" du-scrollspy ng-class=\"{'menu-fixed':sroHeader.menuFixed}\"><li class=\"large-1 large-offset-2 column\"><a href=#sroHeader du-smooth-scroll>Home</a></li><li class=\"large-1 column\"><a href=#sroAbout du-smooth-scroll>About</a></li><li class=\"large-1 column\"><a href=#sroResume du-smooth-scroll>Resume</a></li><li class=\"large-2 column\"><a href=https://twitter.com/romainseb target=_blank><i class=\"fa fa-twitter\"></i></a> <a href=https://github.com/romainseb target=_blank><i class=\"fa fa-github\"></i></a> <a href=https://fr.linkedin.com/pub/sébastien-romain/50/8a1/45a target=_blank><i class=\"fa fa-linkedin\"></i></a></li><li class=\"large-1 column\">Portfolio</li><li class=\"large-1 column\">Blog</li><li class=\"large-1 column\">Contact</li></ul></div>"
   );
 
 
   $templateCache.put('app/views/home/components/sroResume/sroResume.html',
-    "<div class=sroResume></div>"
+    "<div id=sroResume><div class=entete><h2>Parcours professionnel</h2></div><div class=container><div ng-repeat=\"job in sroResume.jobs\">{{job.title}}</div></div></div>"
   );
 
 
   $templateCache.put('app/views/home/home.html',
-    "<div><sro-header></sro-header><sro-about></sro-about></div>"
+    "<div id=home><sro-header></sro-header><sro-about></sro-about><sro-resume></sro-resume></div>"
   );
 
 }]);

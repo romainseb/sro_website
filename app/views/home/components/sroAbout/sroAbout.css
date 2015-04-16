@@ -1,8 +1,8 @@
 #sroAbout {
-    height: 1500px;
+    height: 350px;
     width: 100%;
     background-color: #4ac2be;
-    font-family: maven;
+    font-family: latolight;
     color: white;
 }
 
@@ -15,21 +15,25 @@
 }
 
 #sroAbout .name {
-    margin-top: 30px;
-    font-size: 30px;
+    margin-top: 50px;
+    font-size: 22px;
 }
 
 #sroAbout .title {
-    font-size: 20px;
+    font-size: 16px;
 }
 
 #sroAbout .profile-photo {
     border-radius: 150px;
-    width: 75%;
+    width: 100%;
     max-width: 200px;
-    margin-top: 50px;
+    margin-top: 60px;
     text-align: center;
     border: 2px solid white;
+}
+
+#sroAbout .right-part p {
+    margin-top: 50px;
 }
 
 #sroAbout .profile-photo-container {

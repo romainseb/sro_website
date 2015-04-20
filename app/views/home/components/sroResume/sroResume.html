@@ -1,11 +1,57 @@
 <div id="sroResume">
     <div class="entete">
-        <h2>Parcours professionnel</h2>
+        <h2>- Parcours professionnel -</h2>
     </div>
 
-    <div class="container">
-        <div ng-repeat="job in sroResume.jobs">
-            {{job.title}}
+    <div class="container large-offset-3 large-6">
+
+        <div class="information">
+            Cliquez sur un projet pour en afficher les détails
+        </div>
+
+        <div ng-repeat="entreprise in sroResume.jobs" class="job">
+            <div class="entreprise">
+                <img class="entreprise-logo" ng-src="{{entreprise.logo}}"/>
+
+                <div class="date">
+                    <span class="entreprise-name">{{entreprise.entrepriseName}}</span> -
+                    {{entreprise.dateBegin}} à {{entreprise.dateEnd}}
+                </div>
+            </div>
+
+            <div ng-repeat="project in entreprise.projects"
+                 ng-style="sroResume.getBorderLeftStyle(project.borderColor, (sroResume.selectedProject != project.projectName && $last ))"
+                 class="project"
+                 ng-class="{'no-border' : (sroResume.selectedProject != project.projectName && $last == true)}"
+                    >
+                <div ng-click="sroResume.changeSelectedProject(project.projectName)" class="project-header">
+                    <img class="project-logo"
+                         ng-src="{{project.logo}}"
+                         ng-style="sroResume.getBorderStyle(project.borderColor)"
+                            >
+
+                    <div>
+                        Projet {{project.projectName}} pour {{project.client}} - {{project.jobTitle}}
+                    </div>
+                </div>
+
+                <div collapse="sroResume.selectedProject != project.projectName">
+                    <div>
+                        {{project.description}}
+                    </div>
+                    <div ng-repeat="task in project.taskList">
+                        {{task}}
+                    </div>
+                    <div>
+                        <span ng-repeat="tech in project.technologies">
+                            {{tech}}
+                        </span>
+                    </div>
+                    <div ng-bind-html="sroResume.validHtml(project.specialContent)"></div>
+
+                </div>
+
+            </div>
         </div>
 
     </div>

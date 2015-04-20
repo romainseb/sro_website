@@ -1,11 +1,6 @@
 angular.module('website').run(['$templateCache', function($templateCache) {
   'use strict';
 
-  $templateCache.put('index.html',
-    "<!DOCTYPE html><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content=\"IE=edge\"><title>Sébastien Romain</title><meta name=description content=\"\"><meta name=viewport content=\"width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0\"><meta name=apple-mobile-web-app-capable content=\"yes\"><base href=\"/\"><link rel=stylesheet href=\"/dist/style.min.css\"></head><body ng-app=website><div ng-view></div><script src=/dist/script.min.js></script></body>"
-  );
-
-
   $templateCache.put('app/views/home/components/sroAbout/sroAbout.html',
     "<div id=sroAbout class=row><div class=\"large-4 large-offset-2 column\"><div class=\"large-8 column\"><div class=name>Sébastien Romain</div><div class=title>Développeur Web</div></div><div class=\"large-4 column profile-photo-container\"><img class=profile-photo src=/img/moi.png></div></div><div class=\"large-6 right-part column\"><div class=\"large-8 column\"><p>Développeur avec 5 ans d’expériences, je suis actuellement référent technique AngularJS pour un projet comptant environ quarante personnes. Passionné par mon métier, qui m’offre l’opportunité de rechercher et d’imaginer des solutions aux besoins des entreprises et des utilisateurs, et curieux de nature je m’intéresse à l’évolution des technologies qui apparaissent sur le marché. Spécialiste du développement web, je m'intéresse tout particulièrement au monde Javascript et à ses différents framework.</p></div></div></div>"
   );
@@ -17,7 +12,7 @@ angular.module('website').run(['$templateCache', function($templateCache) {
 
 
   $templateCache.put('app/views/home/components/sroResume/sroResume.html',
-    "<div id=sroResume><div class=entete><h2>Parcours professionnel</h2></div><div class=container><div ng-repeat=\"job in sroResume.jobs\">{{job.title}}</div></div></div>"
+    "<div id=sroResume><div class=entete><h2>- Parcours professionnel -</h2></div><div class=\"container large-offset-3 large-6\"><div class=information>Cliquez sur un projet pour en afficher les détails</div><div ng-repeat=\"entreprise in sroResume.jobs\" class=job><div class=entreprise><img class=entreprise-logo ng-src=\"{{entreprise.logo}}\"><div class=date><span class=entreprise-name>{{entreprise.entrepriseName}}</span> - {{entreprise.dateBegin}} à {{entreprise.dateEnd}}</div></div><div ng-repeat=\"project in entreprise.projects\" ng-style=\"sroResume.getBorderLeftStyle(project.borderColor, (sroResume.selectedProject != project.projectName && $last ))\" class=project ng-class=\"{'no-border' : (sroResume.selectedProject != project.projectName && $last == true)}\"><div ng-click=sroResume.changeSelectedProject(project.projectName) class=project-header><img class=project-logo ng-src={{project.logo}} ng-style=sroResume.getBorderStyle(project.borderColor)><div>Projet {{project.projectName}} pour {{project.client}} - {{project.jobTitle}}</div></div><div collapse=\"sroResume.selectedProject != project.projectName\"><div>{{project.description}}</div><div ng-repeat=\"task in project.taskList\">{{task}}</div><div><span ng-repeat=\"tech in project.technologies\">{{tech}}</span></div><div ng-bind-html=sroResume.validHtml(project.specialContent)></div></div></div></div></div></div>"
   );
 
 

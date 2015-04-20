@@ -1,6 +1,7 @@
 #home .entete {
     background: #343434;
     height: 80px;
+    margin-bottom: 30px;
 }
 
 #home .entete h2 {
@@ -9,5 +10,5 @@
     text-align: center;
     text-transform: uppercase;
     color: white;
-    font-family: maven;
+    font-family: maven
 }

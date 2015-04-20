@@ -1,3 +1,83 @@
 #sroResume {
     height: 400px;
+    font-family: latolight;
+}
+
+#sroResume .job {
+    padding-bottom: 20px;
+    padding-left: 50px;
+    border-left: 3px #c0c0c0 solid;
+    position: relative;
+}
+
+#sroResume .entreprise-logo {
+    margin-top: -10px;
+    margin-left: -77px;
+    position: absolute;
+    width: 50px;
+    border-radius: 30px;
+    border: 2px solid #c0c0c0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+#sroResume .date {
+    margin-bottom: 5px;
+}
+
+#sroResume .date i {
+    margin-right: 5px;
+    padding-top: 5px;
+    color: #2285a2;
+}
+
+#sroResume .entreprise {
+    padding-bottom: 20px;
+}
+
+#sroResume .project {
+    padding-left: 30px;
+    margin-left: 5px;
+    border-left: 2px solid #bababa;
+    transition: all 0.3s ease-in;
+}
+
+#sroResume .project.no-border {
+    border-left: 2px solid transparent;
+}
+
+#sroResume .project-header {
+    padding-top: 10px;
+    height: 50px;
+    padding-bottom: 10px;
+}
+
+#sroResume .project-header:hover {
+    cursor: pointer;
+}
+
+#sroResume .project-logo {
+    width: 40px;
+    margin-top: -10px;
+    margin-left: -51px;
+    position: absolute;
+    border-radius: 30px;
+    border-style: solid;
+    border-width: 2px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+#sroResume .information {
+    color: #bababa;
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+#sroResume .entreprise-name {
+    font-weight: bold;
+    margin-right: 5px;
 }

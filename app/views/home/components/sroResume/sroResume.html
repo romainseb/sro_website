@@ -2,23 +2,19 @@
     <div class="entete">
         <h2>- Parcours professionnel -</h2>
     </div>
-
     <div class="container large-offset-3 large-6">
-
         <div class="information">
             Cliquez sur un projet pour en afficher les détails
         </div>
-
         <div ng-repeat="entreprise in sroResume.jobs" class="job">
             <div class="entreprise">
                 <img class="entreprise-logo" ng-src="{{entreprise.logo}}"/>
 
                 <div class="date">
-                    <span class="entreprise-name">{{entreprise.entrepriseName}}</span> -
-                    {{entreprise.dateBegin}} à {{entreprise.dateEnd}}
+                    <a ng-href="{{entreprise.entrepriseLink}}" target="_blank" class="entreprise-name">{{entreprise.entrepriseName}}</a>
+                    - {{entreprise.dateBegin}} à {{entreprise.dateEnd}}
                 </div>
             </div>
-
             <div ng-repeat="project in entreprise.projects"
                  ng-style="sroResume.getBorderLeftStyle(project.borderColor, (sroResume.selectedProject != project.projectName && $last ))"
                  class="project"
@@ -27,27 +23,29 @@
                 <div ng-click="sroResume.changeSelectedProject(project.projectName)" class="project-header">
                     <img class="project-logo"
                          ng-src="{{project.logo}}"
-                         ng-style="sroResume.getBorderStyle(project.borderColor)"
-                            >
+                         ng-style="sroResume.getBorderStyle(project.borderColor)">
 
                     <div>
-                        Projet {{project.projectName}} pour {{project.client}} - {{project.jobTitle}}
+                        Projet {{project.projectName}} - {{project.jobTitle}} -
+                        {{project.dateBegin}} à {{project.dateEnd}}
                     </div>
                 </div>
-
                 <div collapse="sroResume.selectedProject != project.projectName">
                     <div>
                         {{project.description}}
                     </div>
-                    <div ng-repeat="task in project.taskList">
-                        {{task}}
-                    </div>
+                    <ul>
+                        <li ng-repeat="task in project.taskList">
+                            {{task}}
+                        </li>
+                    </ul>
+
                     <div>
                         <span ng-repeat="tech in project.technologies">
-                            {{tech}}
+                            {{tech}} &nbsp;
                         </span>
                     </div>
-                    <div ng-bind-html="sroResume.validHtml(project.specialContent)"></div>
+                    <div class="special-content" ng-bind-html="sroResume.validHtml(project.specialContent)"></div>
 
                 </div>
 

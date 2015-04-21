@@ -77,7 +77,14 @@
     margin-bottom: 30px;
 }
 
-#sroResume .entreprise-name {
-    font-weight: bold;
+#sroResume a.entreprise-name {
     margin-right: 5px;
+    font: inherit;
+    font-weight: bold;
+    text-decoration: inherit;
+    color: inherit;
+}
+
+#sroResume .special-content {
+    margin-top: 10px;
 }

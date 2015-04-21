@@ -36,6 +36,7 @@ angular.module('website').controller('SroResumeController',
         this.jobs = [
             {
                 entrepriseName: "Sopra Steria",
+                entrepriseLink: "http://steriarecruitment.co.uk/",
                 logo: "/img/sopra-steria.jpeg",
                 dateBegin: "Octobre 2013",
                 dateEnd: "Maintenant",
@@ -83,6 +84,7 @@ angular.module('website').controller('SroResumeController',
             },
             {
                 entrepriseName: "CGI",
+                entrepriseLink: "http://www.cgi.fr/",
                 logo: "/img/cgi.jpg",
                 dateBegin: "Avril 2010",
                 dateEnd: "Septembre 2013",
@@ -208,6 +210,7 @@ angular.module('website').controller('SroResumeController',
             },
             {
                 entrepriseName: "KeepCore",
+                entrepriseLink: "http://www.keepcore.com/",
                 logo: "/img/kc.jpg",
                 dateBegin: "Avril 2008",
                 dateEnd: "Juillet 2008",

@@ -40,13 +40,29 @@
                         </li>
                     </ul>
 
+                    <p>Technologies</p>
+
                     <div>
-                        <span ng-repeat="tech in project.technologies">
-                            {{tech}} &nbsp;
+                        Front-end :
+                        <span ng-repeat="tech in project.technologies.frontEnd">
+                            {{tech}} <span ng-if="!$last">,&nbsp;</span>
                         </span>
                     </div>
-                    <div class="special-content" ng-bind-html="sroResume.validHtml(project.specialContent)"></div>
+                    <div>
+                        Back-end :
+                        <span ng-repeat="tech in project.technologies.backEnd">
+                            {{tech}} <span ng-if="!$last">,&nbsp;</span>
+                        </span>
+                    </div>
+                    <div>
+                        Environnement :
+                        <span ng-repeat="tech in project.technologies.backEnd">
+                            {{tech}} <span ng-if="!$last">,&nbsp;</span>
+                        </span>
+                    </div>
 
+                    <div class="special-content" ng-bind-html="sroResume.validHtml(project.specialContent)"></div>
+                    <img ng-src="{{image}}" ng-repeat="image in project.images">
                 </div>
 
             </div>

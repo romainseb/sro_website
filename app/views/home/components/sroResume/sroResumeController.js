@@ -1,10 +1,22 @@
 angular.module('website').controller('SroResumeController',
     function ($sce) {
 
-        this.selectedProject = null;
+        this.selectedProjects = [];
 
         this.validHtml = function validHtml(value) {
             return $sce.trustAsHtml(value);
+        };
+
+        this.isProjectSelected = function isProjectSelected(projectName) {
+            var bool = false;
+
+            for (var i = 0; i < this.selectedProjects.length; i++) {
+                if (this.selectedProjects[i] === projectName) {
+                    bool = true;
+                }
+            }
+
+            return bool;
         };
 
         this.getBorderLeftStyle = function getBorderLeftStyle(color, hideColor) {
@@ -25,12 +37,33 @@ angular.module('website').controller('SroResumeController',
         };
 
         this.changeSelectedProject = function changeSelectedProject(projectName) {
-            if (projectName === this.selectedProject) {
-                this.selectedProject = null;
+
+            if (!this.isProjectSelected(projectName)) {
+                this.selectedProjects.push(projectName);
             }
             else {
-                this.selectedProject = projectName;
+                for (var i = 0; i < this.selectedProjects.length; i++) {
+                    if (this.selectedProjects[i] === projectName) {
+                        this.selectedProjects.splice(i, 1);
+                    }
+                }
             }
+        };
+
+        this.getProjectBottomBorder = function getProjectBottomBorder(project) {
+
+            var obj = {};
+            obj.borderBottomStyle = "solid";
+            obj.borderBottomWidth = "1px";
+
+            if (this.isProjectSelected(project.projectName)) {
+                obj.borderBottomColor = project.borderColor;
+            }
+            else {
+                obj.borderBottomColor = "transparent";
+            }
+
+            return obj;
         };
 
         this.jobs = [
@@ -99,7 +132,7 @@ angular.module('website').controller('SroResumeController',
                         taskList: [
                             "Développement d'IHM et services",
                             "Conception détaillée",
-                            "Participation au chiffrage d'un projet ( Planning Poker, Chiffrage à dire d'expert, Abaques )",
+                            "Chiffrage du projet ( Planning Poker, Chiffrage à dire d'expert, Abaques )",
                             "Réunions d'architecture"
                         ],
                         technologies: {

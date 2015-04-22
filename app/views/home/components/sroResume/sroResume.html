@@ -16,21 +16,22 @@
                 </div>
             </div>
             <div ng-repeat="project in entreprise.projects"
-                 ng-style="sroResume.getBorderLeftStyle(project.borderColor, (sroResume.selectedProject != project.projectName && $last ))"
+                 ng-style="sroResume.getBorderLeftStyle(project.borderColor, (!sroResume.isProjectSelected(project.projectName) && $last ))"
                  class="project"
-                 ng-class="{'no-border' : (sroResume.selectedProject != project.projectName && $last == true)}"
+                 ng-class="{'no-border' : !(sroResume.isProjectSelected(project.projectName) && $last == true)}"
                     >
+
                 <div ng-click="sroResume.changeSelectedProject(project.projectName)" class="project-header">
                     <img class="project-logo"
                          ng-src="{{project.logo}}"
                          ng-style="sroResume.getBorderStyle(project.borderColor)">
 
-                    <div>
+                    <div ng-style="sroResume.getProjectBottomBorder(project)" class="project-title">
                         Projet {{project.projectName}} - {{project.jobTitle}} -
                         {{project.dateBegin}} à {{project.dateEnd}}
                     </div>
                 </div>
-                <div collapse="sroResume.selectedProject != project.projectName">
+                <div collapse="!sroResume.isProjectSelected(project.projectName)">
                     <div>
                         {{project.description}}
                     </div>

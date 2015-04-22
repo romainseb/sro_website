@@ -161,7 +161,8 @@ module.exports = function (grunt) {
                 directives: [
                     "app/views/home/components/sroHeader",
                     "app/views/home/components/sroResume",
-                    "app/views/home/components/sroAbout"
+                    "app/views/home/components/sroAbout",
+                    "app/views/home/components/sroStudies"
                 ]
             }
         }

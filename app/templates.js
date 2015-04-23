@@ -16,13 +16,18 @@ angular.module('website').run(['$templateCache', function($templateCache) {
   );
 
 
+  $templateCache.put('app/views/home/components/sroSkills/sroSkills.html',
+    "<div id=sroSkills><div class=entete><h2>- Compétences -</h2></div><div class=\"container large-offset-3 large-6\"><div ng-repeat=\"category in sroSkills.skillCategories\"><h3>{{category.categoryName}}</h3><div ng-repeat=\"technology in category.technologies\"><div class=technology>{{technology.name}}</div><div class=percent-container><div class=percent ng-style=\"sroSkills.getBarColor(category, technology)\"></div><div class=empty></div></div></div></div></div></div>"
+  );
+
+
   $templateCache.put('app/views/home/components/sroStudies/sroStudies.html',
-    "<div id=sroStudies><div class=entete><h2>- Formations -</h2></div><div class=\"container large-offset-3 large-6\"><div ng-repeat=\"study in sroStudies.studies\" class=study><div class=icon><i class=\"fa fa-graduation-cap\" ng-if=\"study.type == 'study'\"></i> <i class=\"fa fa-trophy\" ng-if=\"study.type == 'certification'\"></i></div><div class=study-text><div>{{study.name}}</div><div>{{study.date}}</div><div>{{study.link}}</div><div>{{study.subName}}</div><div>{{study.location}}</div></div></div></div></div>"
+    "<div id=sroStudies><div class=entete><h2>- Formations -</h2></div><div class=\"container large-offset-3 large-6\"><div ng-repeat=\"study in sroStudies.studies\" class=study><div class=icon><i class=\"fa fa-graduation-cap\" ng-if=\"study.type == 'study'\"></i> <i class=\"fa fa-trophy\" ng-if=\"study.type == 'certification'\"></i></div><div class=study-text ng-class=\"{'certification' : study.type == 'certification'}\"><div><a target=_blank ng-href={{study.link}}>{{study.name}}</a> - {{study.date}}</div><div>{{study.subName}}</div><div>{{study.location}}</div></div></div></div></div>"
   );
 
 
   $templateCache.put('app/views/home/home.html',
-    "<div id=home><sro-header></sro-header><sro-about></sro-about><sro-resume></sro-resume><sro-studies></sro-studies></div>"
+    "<div id=home><sro-header></sro-header><sro-about></sro-about><sro-resume></sro-resume><sro-skills></sro-skills><sro-studies></sro-studies></div>"
   );
 
 }]);

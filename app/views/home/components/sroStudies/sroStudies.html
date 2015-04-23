@@ -9,10 +9,10 @@
                 <i class="fa fa-trophy" ng-if="study.type == 'certification'"></i>
             </div>
 
-            <div class="study-text">
-                <div>{{study.name}}</div>
-                <div>{{study.date}}</div>
-                <div>{{study.link}}</div>
+            <div class="study-text" ng-class="{'certification' : study.type == 'certification'}">
+                <div>
+                    <a target="_blank" ng-href="{{study.link}}">{{study.name}}</a> - {{study.date}}
+                </div>
                 <div>{{study.subName}}</div>
                 <div>{{study.location}}</div>
             </div>

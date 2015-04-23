@@ -18,17 +18,28 @@
     margin-left: 13px;
 }
 
-#sroStudies .icon i.fa-trophy {
+#sroStudies .icon .fa-trophy {
     margin-left: 15px;
 }
 
 #sroStudies .study {
     border-left: 3px silver solid;
     position: relative;
-    min-height: 80px;
+    padding-bottom: 30px;
+    min-height: 85px;
 }
 
 #sroStudies .study-text {
-    margin-left: 40px;
+    margin-left: 60px;
+}
+
+#sroStudies .study-text.certification {
     padding-top: 12px;
+}
+
+#sroStudies .study-text a {
+    color: inherit;
+    font: inherit;
+    font-weight: bold;
+    text-decoration: inherit;
 }

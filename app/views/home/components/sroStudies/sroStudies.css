@@ -22,6 +22,12 @@
     margin-left: 15px;
 }
 
+#sroStudies .icon .fa-graduation-cap {
+    margin-top: 17px;
+    margin-left: 15px;
+    font-size: 18px;
+}
+
 #sroStudies .study {
     border-left: 3px silver solid;
     position: relative;

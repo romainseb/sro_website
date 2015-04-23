@@ -12,3 +12,7 @@
     color: white;
     font-family: maven
 }
+
+#home .bottom-margin {
+    height: 30px;
+}

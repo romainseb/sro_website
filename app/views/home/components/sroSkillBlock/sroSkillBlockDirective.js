@@ -13,12 +13,12 @@ angular.module('website').directive('sroSkillBlock',
                 var onScroll = function onScroll() {
                     scope.offset =
                         elem[0].offsetTop -
-                        (scope.sroSkillBlock.block.technologies.length * 60) -
-                        100
+                        (scope.sroSkillBlock.block.technologies.length * 44) -
+                        window.innerHeight
                     ;
 
 
-                    scope.positionY = window.scrollY;
+                    scope.positionY = window.scrollY - 300;
                     if (scope.positionY > scope.offset) {
                         scope.sroSkillBlock.showRange = true;
                         scope.$digest();

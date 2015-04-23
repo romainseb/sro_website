@@ -8,27 +8,28 @@ angular.module('website').controller('SroSkillsController',
                 technologies: [
                     {
                         name: "AngularJS",
-                        percent: "90"
-                    },
-                    {
-                        name: "jQuery",
-                        percent: "85"
+                        percent: "95"
                     },
                     {
                         name: "Javascript",
+                        percent: "95"
+                    },
+                    {
+                        name: "jQuery",
                         percent: "90"
                     },
+
                     {
                         name: "HTML5",
                         percent: "85"
                     },
                     {
                         name: "CSS3",
-                        percent: "80"
+                        percent: "85"
                     },
                     {
                         name: "Apache Flex",
-                        percent: "60"
+                        percent: "70"
                     }
                 ]
             },
@@ -38,15 +39,15 @@ angular.module('website').controller('SroSkillsController',
                 technologies: [
                     {
                         name: "Java",
-                        percent: "80"
+                        percent: "85"
                     },
                     {
                         name: "PHP",
-                        percent: "70"
+                        percent: "80"
                     },
                     {
                         name: "NodeJS",
-                        percent: "70"
+                        percent: "80"
                     }
                 ]
             },
@@ -72,7 +73,7 @@ angular.module('website').controller('SroSkillsController',
                     },
                     {
                         name: "eZ Publish",
-                        percent: "70"
+                        percent: "80"
                     },
                     {
                         name: "Sails.js",
@@ -86,11 +87,11 @@ angular.module('website').controller('SroSkillsController',
                 technologies: [
                     {
                         name: "MongoDB",
-                        percent: "60"
+                        percent: "70"
                     },
                     {
                         name: "MySQL / MariaDB",
-                        percent: "70"
+                        percent: "80"
                     },
                     {
                         name: "Oracle",
@@ -108,7 +109,7 @@ angular.module('website').controller('SroSkillsController',
                     },
                     {
                         name: "Grunt",
-                        percent: "70"
+                        percent: "90"
                     },
                     {
                         name: "Gulp",
@@ -116,7 +117,7 @@ angular.module('website').controller('SroSkillsController',
                     },
                     {
                         name: "Bower",
-                        percent: "60"
+                        percent: "80"
                     }
                 ]
             }

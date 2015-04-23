@@ -1,0 +1,11 @@
+<div class="sroSkillBlock">
+    <h3>{{sroSkillBlock.block.categoryName}}</h3>
+
+    <div ng-repeat="technology in sroSkillBlock.block.technologies">
+        <div class="technology">{{technology.name}}</div>
+        <div class="percent-container">
+            <div class="percent" ng-style="sroSkillBlock.getBarColor(sroSkillBlock.block, technology)"></div>
+            <div class="empty"></div>
+        </div>
+    </div>
+</div>

@@ -16,8 +16,13 @@ angular.module('website').run(['$templateCache', function($templateCache) {
   );
 
 
+  $templateCache.put('app/views/home/components/sroSkillBlock/sroSkillBlock.html',
+    "<div class=sroSkillBlock><h3>{{sroSkillBlock.block.categoryName}}</h3><div ng-repeat=\"technology in sroSkillBlock.block.technologies\"><div class=technology>{{technology.name}}</div><div class=percent-container><div class=percent ng-style=\"sroSkillBlock.getBarColor(sroSkillBlock.block, technology)\"></div><div class=empty></div></div></div></div>"
+  );
+
+
   $templateCache.put('app/views/home/components/sroSkills/sroSkills.html',
-    "<div id=sroSkills><div class=entete><h2>- Compétences -</h2></div><div class=\"container large-offset-3 large-6\"><div ng-repeat=\"category in sroSkills.skillCategories\"><h3>{{category.categoryName}}</h3><div ng-repeat=\"technology in category.technologies\"><div class=technology>{{technology.name}}</div><div class=percent-container><div class=percent ng-style=\"sroSkills.getBarColor(category, technology)\"></div><div class=empty></div></div></div></div></div></div>"
+    "<div id=sroSkills><div class=entete><h2>- Compétences -</h2></div><div class=\"container large-offset-3 large-6\"><sro-skill-block ng-repeat=\"category in sroSkills.skillCategories\" block=category></sro-skill-block></div></div>"
   );
 
 

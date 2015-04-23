@@ -1,13 +1,6 @@
 angular.module('website').controller('SroSkillsController',
     function () {
 
-        this.getBarColor = function getBarColor(category, technology) {
-            return {
-                backgroundColor: category.color,
-                width: technology.percent + "%"
-            };
-        };
-
         this.skillCategories = [
             {
                 categoryName: "Front End",

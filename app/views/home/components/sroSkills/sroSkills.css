@@ -4,7 +4,7 @@
 
 #sroSkills .percent-container {
     width: 90%;
-    height: 20px;
+    height: 15px;
     position: relative;
 }
 
@@ -20,6 +20,7 @@
     height: 100%;
     position: absolute;
     z-index: 1;
+    transition: all 1s ease-in;
 }
 
 #sroSkills .technology {

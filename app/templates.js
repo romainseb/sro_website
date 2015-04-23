@@ -17,7 +17,7 @@ angular.module('website').run(['$templateCache', function($templateCache) {
 
 
   $templateCache.put('app/views/home/components/sroStudies/sroStudies.html',
-    "<div id=sroStudies><div class=entete><h2>- Formations -</h2></div><div class=\"container large-offset-3 large-6\"><div ng-repeat=\"study in sroStudies.studies\"><i class=\"fa fa-graduation-cap\" ng-if=\"study.type == 'study'\"></i> <i class=\"fa fa-trophy\" ng-if=\"study.type == 'certification'\"></i> {{study.name}}</div></div></div>"
+    "<div id=sroStudies><div class=entete><h2>- Formations -</h2></div><div class=\"container large-offset-3 large-6\"><div ng-repeat=\"study in sroStudies.studies\" class=study><div class=icon><i class=\"fa fa-graduation-cap\" ng-if=\"study.type == 'study'\"></i> <i class=\"fa fa-trophy\" ng-if=\"study.type == 'certification'\"></i></div><div class=study-text><div>{{study.name}}</div><div>{{study.date}}</div><div>{{study.link}}</div><div>{{study.subName}}</div><div>{{study.location}}</div></div></div></div></div>"
   );
 
 

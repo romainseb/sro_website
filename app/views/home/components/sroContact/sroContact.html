@@ -1,0 +1,39 @@
+<div id="sroContact">
+    <div class="entete">
+        <h2>- Contact -</h2>
+    </div>
+    <div class="container large-offset-3 large-6">
+
+        <div class="information">
+            Pour me contacter, veuillez remplir le formulaire ci dessous
+        </div>
+
+        <!--
+        {{sroContact.currentState}}
+        -->
+        <form ng-submit="sroContact.submit()" class="sro-form" name="sroForm">
+
+            <div class="large-6 column">
+                <input id="contact-name" placeholder="Nom *" type="text" name="name"
+                       ng-model="sroContact.contact.name"
+                       required>
+            </div>
+            <div class="large-6 column">
+                <input id="contact-email" placeholder="Email *" type="email" name="email"
+                       ng-model="sroContact.contact.email">
+            </div>
+
+            <div class="large-12 column">
+                <textarea id="contact-content" type="text" placeholder="Message *" name="content"
+                          ng-model="sroContact.contact.content"
+                          required></textarea>
+                <button class="small" type="submit">Envoyer</button>
+            </div>
+            <div class="clearfix"></div>
+
+
+        </form>
+
+    </div>
+    <div class="bottom-margin"></div>
+</div>

@@ -1,0 +1,45 @@
+#sroContact {
+    font-family: latolight;
+}
+
+#sroContact .sro-form input,
+#sroContact .sro-form textarea {
+    background: #ffffff;
+    color: #666666;
+    font-family: inherit;
+    font-size: 13px;
+    margin: 0 0 14px;
+    outline: 0 none;
+    padding: 10px;
+    resize: none;
+    width: 100%;
+    border: 1px solid #f3f3f3;
+    overflow: hidden;
+    transition: all 0.3s linear;
+}
+
+#sroContact .sro-form textarea {
+    min-height: 170px;
+}
+
+#sroContact .sro-form input:focus,
+#sroContact .sro-form textarea:focus,
+#sroContact .sro-form input.ng-invalid.ng-pristine:focus,
+#sroContact .sro-form textarea.ng-invalid.ng-pristine:focus {
+    border: 1px solid #444444;
+}
+
+#sroContact button {
+    color: white;
+}
+
+#sroContact .sro-form input.ng-invalid,
+#sroContact .sro-form textarea.ng-invalid {
+    border-color: #ff0000;
+}
+
+#sroContact .sro-form input.ng-invalid.ng-pristine,
+#sroContact .sro-form textarea.ng-invalid.ng-pristine {
+    border-color: #f3f3f3;
+}
+

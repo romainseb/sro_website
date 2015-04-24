@@ -13,6 +13,14 @@
     font-family: maven
 }
 
+#home .information {
+    color: #bababa;
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
 #home .bottom-margin {
     height: 30px;
+    display: block;
 }

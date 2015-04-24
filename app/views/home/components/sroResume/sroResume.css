@@ -69,13 +69,6 @@
     background-position: 50% 50%;
 }
 
-#sroResume .information {
-    color: #bababa;
-    text-align: center;
-    font-style: italic;
-    margin-bottom: 30px;
-}
-
 #sroResume .entreprise-name {
     margin-right: 5px;
     font: inherit;

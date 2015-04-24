@@ -33,26 +33,32 @@ app.get('/*', function (req, res) {
 });
 app.post("/contact", function (req, res) {
 
-    console.log(req.body);
-// setup e-mail data with unicode symbols
-    var mailOptions = {
-        from: 'nooofr nooofr <foo@blurdybloop.com>', // sender address
-        to: 'sebastien.romain@gmail.com', // list of receivers
-        subject: 'Hello ✔', // Subject line
-        text: 'Hello world ✔', // plaintext body
-        html: '<b>Hello world ✔</b>' // html body
-    };
+    if (req !== undefined &&
+        req.body !== undefined &&
+        req.body.name !== undefined &&
+        req.body.email !== undefined &&
+        req.body.content !== undefined
+    ) {
 
-    transporter.sendMail(mailOptions, function (error, info) {
-        if (error) {
-            console.log(error);
-            res.send(500);
-        } else {
-            console.log('Message sent: ' + info.response);
-            res.send(200);
-        }
-    });
+        var mailOptions = {};
 
+        mailOptions.from = req.body.name + "<" + req.body.email + ">";
+        mailOptions.to = "sebastien.romain@gmail.com";
+        mailOptions.subject = "Contact SRO Website";
+        mailOptions.text = 'Message from : ' + req.body.name + " ( " + req.body.email + " ). \n\n " + req.body.content;
+
+        transporter.sendMail(mailOptions, function (error, info) {
+            if (error) {
+                res.send(500);
+            } else {
+                res.send(200);
+            }
+        });
+
+    }
+    else {
+        res.send(500);
+    }
 
 });
 

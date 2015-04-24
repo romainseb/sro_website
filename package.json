@@ -20,9 +20,10 @@
     "grunt-contrib-watch": "^0.6.1",
     "grunt-express-server": "^0.5.1",
     "grunt-ng-annotate": "^0.10.0",
+    "grunt-sro-create-angular-components": "0.1.3",
     "jshint-stylish": "^1.0.1",
     "load-grunt-tasks": "^3.1.0",
-    "grunt-sro-create-angular-components": "0.1.3",
+    "nodemailer": "^1.3.4",
     "time-grunt": "^1.1.0"
   }
 }

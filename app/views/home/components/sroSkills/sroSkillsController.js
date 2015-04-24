@@ -18,7 +18,10 @@ angular.module('website').controller('SroSkillsController',
                         name: "jQuery",
                         percent: "90"
                     },
-
+                    {
+                        name: "ReactJS",
+                        percent: "50"
+                    },
                     {
                         name: "HTML5",
                         percent: "85"

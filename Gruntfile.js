@@ -58,13 +58,21 @@ module.exports = function (grunt) {
                 ],
                 dest: 'dist/style.css'
             },
-            'js': {
+            'js-not-min': {
                 src: [
-                    "app/vendors/js/angular.min.js",
                     "app/app.js",
-                    "app/**/*.js"
+                    "app/**/*.js",
+                    "!app/vendors/**/*.min.js"
                 ],
                 dest: 'dist/script.js'
+            },
+            'js-min': {
+                src: [
+                    "app/vendors/js/angular.min.js",
+                    "app/vendors/**/*.min.js",
+                    "dist/script.min.js"
+                ],
+                dest: 'dist/script.min.js'
             }
         },
         autoprefixer: {
@@ -111,7 +119,7 @@ module.exports = function (grunt) {
             },
             js: {
                 files: ['app/**/*.js'],
-                tasks: ['concat:js', 'ngAnnotate', 'uglify', 'jshint', 'clean:end-build'],
+                tasks: ['concat:js-not-min', 'ngAnnotate', 'uglify:js', 'concat:js-min', 'jshint', 'clean:end-build'],
                 options: {
                     interrupt: true
                 }
@@ -164,7 +172,8 @@ module.exports = function (grunt) {
                     "app/views/home/components/sroAbout",
                     "app/views/home/components/sroStudies",
                     "app/views/home/components/sroSkills",
-                    "app/views/home/components/sroSkillBlock"
+                    "app/views/home/components/sroSkillBlock",
+                    "app/views/home/components/sroContact"
                 ]
             }
         }
@@ -172,12 +181,14 @@ module.exports = function (grunt) {
 
     grunt.registerTask('default', [
         'clean:dist',
-        'concat',
+        'concat:css',
+        'concat:js-not-min',
         'autoprefixer',
         'cssmin',
         'ngtemplates',
         'ngAnnotate',
-        'uglify',
+        'uglify:js',
+        'concat:js-min',
         'clean:end-build',
         'csslint',
         'jshint'

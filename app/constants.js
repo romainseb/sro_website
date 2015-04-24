@@ -1,6 +1,3 @@
-angular.module('website')
-.constant(
-    "urls", {
-    }
-)
-;
+angular.module('website').constant(
+    "urls", {}
+);

@@ -33,10 +33,10 @@ app.get('/*', function (req, res) {
 });
 app.post("/contact", function (req, res) {
 
-//    console.log(req.body);
+    console.log(req.body);
 // setup e-mail data with unicode symbols
     var mailOptions = {
-        from: 'Fred Foo ✔ <foo@blurdybloop.com>', // sender address
+        from: 'nooofr nooofr <foo@blurdybloop.com>', // sender address
         to: 'sebastien.romain@gmail.com', // list of receivers
         subject: 'Hello ✔', // Subject line
         text: 'Hello world ✔', // plaintext body

@@ -13,12 +13,9 @@ angular.module('website').controller('SroContactController',
             SroContactService.sendMail(this.contact)
                 .then(function onSuccess() {
                     that.currentState = 1;
-                    $scope.$digest();
                 }, function onFail() {
                     that.currentState = 2;
-                    $scope.$digest();
                 });
         };
-
     }
 );

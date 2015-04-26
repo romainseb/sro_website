@@ -4,8 +4,6 @@
   "version": "0.0.1",
   "private": true,
   "devDependencies": {
-    "body-parser": "*",
-    "express": "^5.0.0-alpha.1",
     "grunt": "*",
     "grunt-angular-templates": "*",
     "grunt-autoprefixer": "*",
@@ -23,7 +21,11 @@
     "grunt-sro-create-angular-components": "*",
     "jshint-stylish": "*",
     "load-grunt-tasks": "*",
-    "nodemailer": "*",
     "time-grunt": "^1.1.1"
+  },
+  "dependencies": {
+    "body-parser": "^1.12.3",
+    "express": "^5.0.0-alpha.1",
+    "nodemailer": "*"
   }
 }

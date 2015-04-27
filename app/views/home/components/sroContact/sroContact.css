@@ -13,7 +13,7 @@
     padding: 10px;
     resize: none;
     width: 100%;
-    border: 1px solid #f3f3f3;
+    border: 1px solid #CCCCCC;
     overflow: hidden;
     transition: all 0.3s linear;
 }
@@ -40,6 +40,6 @@
 
 #sroContact .sro-form input.ng-invalid.ng-pristine,
 #sroContact .sro-form textarea.ng-invalid.ng-pristine {
-    border-color: #f3f3f3;
+    border-color: #CCCCCC;
 }
 

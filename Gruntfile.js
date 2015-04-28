@@ -211,7 +211,8 @@ module.exports = function (grunt) {
 
     grunt.registerTask('bower-task', [
         "bower",
-        "copy:bowerFiles",
-        "clean:tmp"
+        "copy:bowerFiles"
     ]);
+    //"clean:tmp"
 };
+

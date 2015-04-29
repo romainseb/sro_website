@@ -8,6 +8,14 @@
     background-size: cover;
 }
 
+#sroHeader .text-right {
+    text-align: right;
+}
+
+#sroHeader .text-left {
+    text-align: left;
+}
+
 #sroHeader .name {
     font-size: 60px;
 }
@@ -37,7 +45,7 @@
 
 #sroHeader ul li a {
     color: white;
-    margin-left: 5px;
+    margin-left: 10px;
     margin-right: 5px;
     text-decoration: none;
     transition: all 0.3s ease-in;

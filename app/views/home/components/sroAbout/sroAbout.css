@@ -1,9 +1,18 @@
 #sroAbout {
-    height: 350px;
     width: 100%;
     background-color: #4ac2be;
     font-family: latolight;
     color: white;
+}
+
+#sroAbout .link-cv {
+    background-color: #3eafab;
+    color: white;
+    margin-top: 20px;
+    padding: 10px;
+    display: block;
+    text-decoration: inherit;
+    width: 165px;
 }
 
 #sroAbout > div {
@@ -12,6 +21,7 @@
 
 #sroAbout .right-part {
     background-color: #3eafab;
+    padding-bottom: 20px;
 }
 
 #sroAbout .name {

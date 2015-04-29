@@ -43,3 +43,22 @@
     border-color: #CCCCCC;
 }
 
+#sroContact .form-height {
+    height: 344px;
+}
+
+#sroContact .text-error {
+    font-size: 30px;
+    width: 100%;
+    text-align: center;
+}
+
+#sroContact .sub-text-error {
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+#sroContact .form-error {
+    padding-top: 70px;
+}

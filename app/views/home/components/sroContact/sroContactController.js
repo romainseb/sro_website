@@ -5,16 +5,20 @@ angular.module('website').controller('SroContactController',
 
         // states :
         // 0 -> form showned
-        // 1 -> form hiddenSuccess
-        // 2 -> form hiddenFail
+        // 1 -> form waiting
+        // 2 -> form hiddenSuccess
+        // 3 -> form hiddenFail
         this.currentState = 0;
 
         this.submit = function submit() {
+
+            that.currentState = 1;
+
             SroContactService.sendMail(this.contact)
                 .then(function onSuccess() {
-                    that.currentState = 1;
-                }, function onFail() {
                     that.currentState = 2;
+                }, function onFail() {
+                    that.currentState = 3;
                 });
         };
     }

@@ -10,16 +10,27 @@ angular.module('website').controller('SroContactController',
         // 3 -> form hiddenFail
         this.currentState = 0;
 
+        this.isDefined = function isDefined(prop) {
+            return (prop !== undefined && prop !== null && prop !== "");
+        };
+
         this.submit = function submit() {
 
-            that.currentState = 1;
+            if (
+                this.isDefined($scope.sroContact.contact.name) &&
+                this.isDefined($scope.sroContact.contact.email) &&
+                this.isDefined($scope.sroContact.contact.content)
+            ) {
+                that.currentState = 1;
 
-            SroContactService.sendMail(this.contact)
-                .then(function onSuccess() {
-                    that.currentState = 2;
-                }, function onFail() {
-                    that.currentState = 3;
-                });
+                SroContactService.sendMail(this.contact)
+                    .then(function onSuccess() {
+                        that.currentState = 2;
+                    }, function onFail() {
+                        that.currentState = 3;
+                    });
+            }
+
         };
     }
 );

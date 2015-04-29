@@ -53,6 +53,18 @@ tbody.collapse.in {
     float: left;
 }
 
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
 @media screen and (max-width: 600px) {
     .hidden-mobile {
         display: none !important;

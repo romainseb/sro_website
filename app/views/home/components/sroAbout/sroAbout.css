@@ -10,7 +10,7 @@
     color: white;
     margin-top: 20px;
     padding: 10px;
-    display: block;
+    display: inline-block;
     text-decoration: inherit;
     width: 165px;
 }
@@ -36,7 +36,7 @@
 #sroAbout .profile-photo {
     border-radius: 150px;
     width: 100%;
-    max-width: 200px;
+    max-width: 120px;
     margin-top: 60px;
     text-align: center;
     border: 2px solid white;

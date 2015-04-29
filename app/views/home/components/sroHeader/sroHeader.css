@@ -8,14 +8,6 @@
     background-size: cover;
 }
 
-#sroHeader .text-right {
-    text-align: right;
-}
-
-#sroHeader .text-left {
-    text-align: left;
-}
-
 #sroHeader .name {
     font-size: 60px;
 }

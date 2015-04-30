@@ -49,3 +49,29 @@
 #sroAbout .profile-photo-container {
     text-align: right;
 }
+
+@media screen and (max-width: 800px) {
+
+    #sroAbout .profile-photo-container {
+        text-align: left;
+    }
+
+    #sroAbout .text-block {
+        padding-bottom: 20px;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+    #sroAbout .profile-photo-container {
+        text-align: center;
+        float: left;
+        width: 100%;
+    }
+
+    #sroAbout .name {
+        margin-top: 20px;
+    }
+}
+

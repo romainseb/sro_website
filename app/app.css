@@ -69,6 +69,10 @@ tbody.collapse.in {
     .hidden-mobile {
         display: none !important;
     }
+
+    .block-mobile {
+        display: block;
+    }
 }
 
 @media screen and (min-width: 600px) {

@@ -84,3 +84,30 @@
 #sroResume .project-title {
     transition: all 0.3s ease-in;
 }
+
+@media screen and (max-width: 600px) {
+    #sroResume .entreprise-logo {
+        margin-left: -53px;
+        margin-top: -3px;
+    }
+
+    #sroResume .job {
+        padding-left: 30px;
+    }
+
+    #sroResume .project-logo {
+        margin-top: 13px;
+    }
+
+    #sroResume .entreprise {
+        padding-bottom: 0px;
+    }
+
+    #sroResume .project {
+        padding-left: 0px;
+    }
+
+    #sroResume .project-header {
+        height: 70px;
+    }
+}

@@ -8,6 +8,10 @@
     background-size: cover;
 }
 
+#sroHeader ul .website-links a {
+    margin-left: 5px;
+}
+
 #sroHeader .name {
     font-size: 60px;
 }
@@ -53,4 +57,14 @@
 
 #sroHeader .menu-links.menu-fixed a {
     color: #555555;
+}
+
+@media screen and (max-width: 600px) {
+    #sroHeader .top-panel {
+        padding-top: 100px;
+    }
+
+    #sroHeader {
+        height: 450px;
+    }
 }

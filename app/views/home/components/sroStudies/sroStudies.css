@@ -49,3 +49,20 @@
     font-weight: bold;
     text-decoration: inherit;
 }
+
+@media screen and (max-width: 600px) {
+
+    #sroStudies .study-text.certification {
+        padding-top: 4px;
+    }
+
+    #sroStudies .study-text {
+        margin-left: 35px;
+    }
+
+    #sroStudies .study {
+        margin-left: 13px;
+    }
+
+}
+

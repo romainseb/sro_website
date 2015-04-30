@@ -2,7 +2,7 @@
     <div class="entete">
         <h2>- Formations -</h2>
     </div>
-    <div class="container large-offset-3 large-6">
+    <div class="container medium-offset-1 medium-10 large-offset-3 large-6 small-10 small-offset-1">
         <div ng-repeat="study in sroStudies.studies" class="study">
             <div class="icon">
                 <i class="fa fa-graduation-cap" ng-if="study.type == 'study'"></i>
@@ -11,7 +11,9 @@
 
             <div class="study-text" ng-class="{'certification' : study.type == 'certification'}">
                 <div>
-                    <a target="_blank" ng-href="{{study.link}}">{{study.name}}</a> - {{study.date}}
+                    <a target="_blank" ng-href="{{study.link}}">{{study.name}}</a>
+                    <span class="hidden-mobile">-</span>
+                    <span class="block-mobile">{{study.date}}</span>
                 </div>
                 <div>{{study.subName}}</div>
                 <div>{{study.location}}</div>

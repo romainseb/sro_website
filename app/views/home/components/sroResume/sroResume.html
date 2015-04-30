@@ -1,8 +1,8 @@
 <div id="sroResume">
     <div class="entete">
-        <h2>- Parcours professionnel -</h2>
+        <h2>- Parcours pro<span class="hidden-mobile">fessionnel</span> -</h2>
     </div>
-    <div class="container large-offset-3 large-6">
+    <div class="container medium-offset-1 medium-10 large-offset-3 large-6 small-10 small-offset-1">
         <div class="information">
             Cliquez sur un projet pour en afficher les détails
         </div>
@@ -12,7 +12,7 @@
 
                 <div class="date">
                     <a ng-href="{{entreprise.entrepriseLink}}" target="_blank" class="entreprise-name">{{entreprise.entrepriseName}}</a>
-                    - {{entreprise.dateBegin}} à {{entreprise.dateEnd}}
+                    <span class="hidden-mobile">-</span> <span class="block-mobile">{{entreprise.dateBegin}} à {{entreprise.dateEnd}}</span>
                 </div>
             </div>
             <div ng-repeat="project in entreprise.projects"
@@ -63,7 +63,9 @@
                     </div>
 
                     <div class="special-content" ng-bind-html="sroResume.validHtml(project.specialContent)"></div>
+                    <!--
                     <img ng-src="{{image}}" ng-repeat="image in project.images">
+                    -->
                 </div>
 
             </div>

@@ -11,6 +11,11 @@ angular.module('website').run(['$templateCache', function($templateCache) {
   );
 
 
+  $templateCache.put('app/views/home/components/sroFooter/sroFooter.html',
+    "<div id=sroFooter><div class=entete><a href=https://github.com/romainseb/sro_website target=_blank>Code sur Github</a> - <a href=http://old.sebastien-romain.fr target=_blank>Ancien site</a></div></div>"
+  );
+
+
   $templateCache.put('app/views/home/components/sroHeader/sroHeader.html',
     "<div id=sroHeader><div class=top-panel><div class=name>Sébastien Romain</div><div class=title>Développeur Web</div></div><ul class=\"menu-links row\" du-scrollspy ng-class=\"{'menu-fixed':sroHeader.menuFixed}\"><li class=\"small-7 column hidden-not-mobile\">Sébastien Romain</li><li class=\"large-5 medium-5 column hidden-mobile text-right\"><a href=#sroHeader du-smooth-scroll>Accueil</a> <a href=#sroAbout du-smooth-scroll>A Propos</a> <a href=#sroResume du-smooth-scroll>Parcours</a></li><li class=\"large-2 medium-2 small-5 column website-links\"><a href=https://twitter.com/romainseb target=_blank><i class=\"fa fa-twitter\"></i></a> <a href=https://github.com/romainseb target=_blank><i class=\"fa fa-github\"></i></a> <a href=https://fr.linkedin.com/pub/sébastien-romain/50/8a1/45a target=_blank><i class=\"fa fa-linkedin\"></i></a></li><li class=\"large-5 medium-5 column hidden-mobile text-left\"><a href=#sroSkills du-smooth-scroll>Compétences</a> <a href=#sroStudies du-smooth-scroll>Formations</a> <a href=#sroContact du-smooth-scroll>Contact</a></li></ul></div>"
   );
@@ -37,7 +42,7 @@ angular.module('website').run(['$templateCache', function($templateCache) {
 
 
   $templateCache.put('app/views/home/home.html',
-    "<div id=home><sro-header></sro-header><sro-about></sro-about><sro-resume></sro-resume><sro-skills></sro-skills><sro-studies></sro-studies><sro-contact></sro-contact></div>"
+    "<div id=home><sro-header></sro-header><sro-about></sro-about><sro-resume></sro-resume><sro-skills></sro-skills><sro-studies></sro-studies><sro-contact></sro-contact><sro-footer></sro-footer></div>"
   );
 
 }]);

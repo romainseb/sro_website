@@ -14,7 +14,7 @@ angular.module('website')
         var onScroll = function onScroll() {
             positionY = window.scrollY;
             //headerElement.style.backgroundPositionY = -positionY / 3 + "px";
-            if (positionY > 390) {
+            if (positionY > 460) {
                 if (_this.menuFixed === false) {
                     _this.menuFixed = true;
                     $scope.$digest();

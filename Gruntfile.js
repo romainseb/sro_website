@@ -173,7 +173,8 @@ module.exports = function (grunt) {
                     "app/views/home/components/sroStudies",
                     "app/views/home/components/sroSkills",
                     "app/views/home/components/sroSkillBlock",
-                    "app/views/home/components/sroContact"
+                    "app/views/home/components/sroContact",
+                    "app/views/home/components/sroFooter"
                 ]
             }
         }

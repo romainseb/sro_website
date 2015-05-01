@@ -50,7 +50,7 @@
     text-decoration: inherit;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
 
     #sroStudies .study-text.certification {
         padding-top: 4px;

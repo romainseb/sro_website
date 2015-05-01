@@ -50,7 +50,7 @@
     text-align: right;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1024px) {
 
     #sroAbout .profile-photo-container {
         text-align: left;
@@ -62,7 +62,7 @@
 
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
 
     #sroAbout .profile-photo-container {
         text-align: center;
@@ -70,7 +70,7 @@
         width: 100%;
     }
 
-    #sroAbout .name {
+    #sroAbout .job-name {
         margin-top: 20px;
     }
 }

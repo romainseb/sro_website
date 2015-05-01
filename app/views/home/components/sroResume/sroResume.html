@@ -34,7 +34,8 @@
                         <span class="block-mobile">{{project.dateBegin}} à {{project.dateEnd}}</span>
                     </div>
                 </div>
-                <div collapse="!sroResume.isProjectSelected(project.projectName)" class="angular-animate">
+                <div collapse="!sroResume.isProjectSelected(project.projectName)"
+                     class="angular-animate project-description">
                     <div>
                         {{project.description}}
                     </div>
@@ -46,19 +47,19 @@
 
                     <p>Technologies</p>
 
-                    <div>
+                    <div class="technology-group">
                         Front-end :
                         <span ng-repeat="tech in project.technologies.frontEnd">
                             {{tech}} <span ng-if="!$last">,&nbsp;</span>
                         </span>
                     </div>
-                    <div>
+                    <div class="technology-group">
                         Back-end :
                         <span ng-repeat="tech in project.technologies.backEnd">
                             {{tech}} <span ng-if="!$last">,&nbsp;</span>
                         </span>
                     </div>
-                    <div>
+                    <div class="technology-group">
                         Environnement :
                         <span ng-repeat="tech in project.technologies.backEnd">
                             {{tech}} <span ng-if="!$last">,&nbsp;</span>

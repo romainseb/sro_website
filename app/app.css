@@ -65,7 +65,7 @@ tbody.collapse.in {
     text-align: left;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
     .hidden-mobile {
         display: none !important;
     }
@@ -75,7 +75,7 @@ tbody.collapse.in {
     }
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 650px) {
     .hidden-not-mobile {
         display: none !important;
     }

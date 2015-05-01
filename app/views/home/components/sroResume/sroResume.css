@@ -85,7 +85,7 @@
     transition: all 0.3s ease-in;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
     #sroResume .entreprise-logo {
         margin-left: -53px;
         margin-top: -3px;
@@ -117,5 +117,13 @@
     #sroResume .project-title {
         margin-top: -30px;
         margin-left: 10px;
+    }
+
+    #sroResume .project-description {
+        padding-bottom: 20px;
+    }
+
+    #sroResume .technology-group {
+        margin-top: 10px;
     }
 }

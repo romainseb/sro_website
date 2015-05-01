@@ -27,8 +27,11 @@
                          ng-style="sroResume.getBorderStyle(project.borderColor)">
 
                     <div ng-style="sroResume.getProjectBottomBorder(project)" class="project-title">
-                        Projet {{project.projectName}} - {{project.jobTitle}} -
-                        {{project.dateBegin}} à {{project.dateEnd}}
+                        Projet {{project.projectName}}
+                        <span class="hidden-mobile"> - </span>
+                        <span class="block-mobile">{{project.jobTitle}}</span>
+                        <span class="hidden-mobile"> - </span>
+                        <span class="block-mobile">{{project.dateBegin}} à {{project.dateEnd}}</span>
                     </div>
                 </div>
                 <div collapse="!sroResume.isProjectSelected(project.projectName)" class="angular-animate">

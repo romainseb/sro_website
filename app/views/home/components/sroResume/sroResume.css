@@ -96,18 +96,26 @@
     }
 
     #sroResume .project-logo {
-        margin-top: 13px;
+        margin-left: -40px;
+        margin-top: -30px;
     }
 
     #sroResume .entreprise {
-        padding-bottom: 0px;
+        padding-bottom: 20px;
     }
 
     #sroResume .project {
-        padding-left: 0px;
+        margin-left: -25px;
+        padding-left: 20px;
+        margin-top: 20px;
     }
 
     #sroResume .project-header {
         height: 70px;
+    }
+
+    #sroResume .project-title {
+        margin-top: -30px;
+        margin-left: 10px;
     }
 }

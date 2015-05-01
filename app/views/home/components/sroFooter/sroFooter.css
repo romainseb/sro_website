@@ -1,0 +1,15 @@
+#sroFooter {
+    font-family: latolight;
+}
+
+#sroFooter .entete {
+    text-align: center;
+    padding-top: 25px;
+    margin-bottom: 0px !important;
+    color: white;
+}
+
+#sroFooter .entete a {
+    color: inherit;
+    text-decoration: inherit;
+}

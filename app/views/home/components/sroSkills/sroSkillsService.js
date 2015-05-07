@@ -20,7 +20,7 @@ angular.module('website').service('SroSkillsService',
                     },
                     {
                         name: "ReactJS",
-                        percent: "50"
+                        percent: "30"
                     },
                     {
                         name: "HTML5",
@@ -46,11 +46,11 @@ angular.module('website').service('SroSkillsService',
                     },
                     {
                         name: "PHP",
-                        percent: "80"
+                        percent: "60"
                     },
                     {
                         name: "NodeJS",
-                        percent: "80"
+                        percent: "50"
                     }
                 ]
             },
@@ -80,7 +80,7 @@ angular.module('website').service('SroSkillsService',
                     },
                     {
                         name: "Sails.js",
-                        percent: "50"
+                        percent: "30"
                     }
                 ]
             },
@@ -90,7 +90,7 @@ angular.module('website').service('SroSkillsService',
                 technologies: [
                     {
                         name: "MongoDB",
-                        percent: "70"
+                        percent: "60"
                     },
                     {
                         name: "MySQL / MariaDB",
@@ -108,7 +108,7 @@ angular.module('website').service('SroSkillsService',
                 technologies: [
                     {
                         name: "NPM",
-                        percent: "70"
+                        percent: "60"
                     },
                     {
                         name: "Grunt",
